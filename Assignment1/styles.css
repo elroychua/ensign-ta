@@ -2,24 +2,28 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 
+nav,
+.left,
+.logo,
+.search-bar,
+.profile,
+.board,
+.cardName-purple,
+.cardName-blue,
+.cardName-lightblue {
+  display: flex;
+  align-items: center;
+}
+
 nav {
   background-color: white;
   padding: 13px 30px;
-  display: flex;
-  align-items: center;
   justify-content: space-between;
   box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.19);
 }
 
-.left {
-  display: flex;
-  align-items: center;
-}
-
 .logo {
-  display: flex;
   margin-right: 20px;
-  align-items: center;
 }
 
 .logo img {
@@ -35,8 +39,6 @@ nav {
 }
 
 .search-bar {
-  display: flex;
-  align-items: center;
   padding: 5px 10px;
   border-radius: 4px;
 }
@@ -69,8 +71,6 @@ nav {
 }
 
 .profile {
-  display: flex;
-  align-items: center;
   margin-right: 20px;
 }
 
@@ -91,10 +91,6 @@ nav {
 .kanban {
   background-color: #f6f7f8;
   padding: 30px 70px;
-}
-
-.board {
-  display: flex;
 }
 
 .column {
@@ -140,56 +136,42 @@ nav {
   margin-top: 10px;
 }
 
-.cardName-purple {
-  height: 28px;
-  width: 28px;
-  display: flex;
-  align-items: center;
-  align-self: center;
-  justify-content: center;
-  border-radius: 50%;
-  color: #ffffff;
-  background-color: #c134f8;
-}
-.cardName-blue {
-  height: 28px;
-  width: 28px;
-  display: flex;
-  align-items: center;
-  align-self: center;
-  justify-content: center;
-  border-radius: 50%;
-  color: #ffffff;
-  background-color: #3691fb;
-}
+.cardName-purple,
+.cardName-blue,
 .cardName-lightblue {
   height: 28px;
   width: 28px;
-  display: flex;
-  align-items: center;
   align-self: center;
   justify-content: center;
   border-radius: 50%;
   color: #ffffff;
+}
+.cardName-purple {
+  background-color: #c134f8;
+}
+.cardName-blue {
+  background-color: #3691fb;
+}
+.cardName-lightblue {
   background-color: #3dcefb;
 }
 
-.cardDueDate {
+.cardDueDate,
+.cardDueDate-red,
+.cardDueDate-green,
+.cardDueDate-purple,
+.cardDueDate-gray {
   font-size: 12px;
 }
 .cardDueDate-red {
   color: #ef0000;
-  font-size: 12px;
 }
 .cardDueDate-green {
   color: #4ad96e;
-  font-size: 12px;
 }
 .cardDueDate-purple {
   color: #8730ff;
-  font-size: 12px;
 }
 .cardDueDate-gray {
   color: #b1b9c6;
-  font-size: 12px;
 }

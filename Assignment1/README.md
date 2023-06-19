@@ -8,9 +8,17 @@
 
 ## Assumptions made:
 
-1. The design is responsive and the content is centered.
+1. The design is not responsive and the content is centered.
 2. The design is implemented using flexbox.
 3. Solution allows for HTML, CSS and JS files.
+
+## Technical decisions:
+
+1. The design is implemented using flexbox.
+2. Children within (`<body>`) consist of (`<header>`) and (`<main>`) since there is no footer based on the design.
+3. Used CSS variables for colors and font sizes. (for easy customization)
+4. Used JS to create the backlog, todo and done column content dynamically. (for easy customization)
+5.
 
 ## How to run:
 
