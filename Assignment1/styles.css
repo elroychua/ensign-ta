@@ -1,0 +1,195 @@
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+nav {
+  background-color: white;
+  padding: 13px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.19);
+}
+
+.left {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  margin-right: 20px;
+  align-items: center;
+}
+
+.logo img {
+  height: 45px;
+  width: auto;
+}
+
+.divider {
+  width: 4px;
+  height: 40px;
+  background-color: #f6f7f8;
+  margin: 0 20px;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  padding: 5px 10px;
+  border-radius: 4px;
+}
+
+.search-bar img {
+  height: 30px;
+  width: 30px;
+  margin-right: 10px;
+}
+
+.search-bar input[type="search"] {
+  font-size: 18px;
+  padding: 6px;
+  border: 0px;
+}
+
+.search-bar input[type="search"]::placeholder {
+  font-weight: 300 !important;
+  font-family: "Roboto", sans-serif;
+  color: #c5cacd;
+}
+
+.search-bar button {
+  padding: 6px 10px;
+  display: flex;
+  border-radius: 4px;
+  border: none;
+  background-color: #4caf50;
+  cursor: pointer;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.profile img {
+  height: 38px;
+  width: 38px;
+  border-radius: 50%;
+}
+
+.profile-name {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  color: #646678;
+  margin-left: 12px;
+  font-size: 17px;
+}
+
+.kanban {
+  background-color: #f6f7f8;
+  padding: 30px 70px;
+}
+
+.board {
+  display: flex;
+}
+
+.column {
+  margin-right: 20px;
+  padding: 10px;
+  background-color: #f6f7f8;
+  border-radius: 2px;
+  min-width: 315px;
+}
+
+.column-header {
+  font-weight: bold;
+  font-size: 24px;
+  padding-bottom: 30px;
+}
+
+.card {
+  margin-bottom: 20px;
+  padding: 14px 16px;
+  background-color: #fff;
+  border-radius: 4px;
+}
+
+.card h1 {
+  font-weight: bold;
+  font-size: 16px;
+  color: #3e425f;
+}
+
+.card h3 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #c5cacd;
+}
+
+.cardDetails {
+  display: flex;
+  font-size: 10px;
+  height: 30px;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.cardName-purple {
+  height: 28px;
+  width: 28px;
+  display: flex;
+  align-items: center;
+  align-self: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: #ffffff;
+  background-color: #c134f8;
+}
+.cardName-blue {
+  height: 28px;
+  width: 28px;
+  display: flex;
+  align-items: center;
+  align-self: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: #ffffff;
+  background-color: #3691fb;
+}
+.cardName-lightblue {
+  height: 28px;
+  width: 28px;
+  display: flex;
+  align-items: center;
+  align-self: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: #ffffff;
+  background-color: #3dcefb;
+}
+
+.cardDueDate {
+  font-size: 12px;
+}
+.cardDueDate-red {
+  color: #ef0000;
+  font-size: 12px;
+}
+.cardDueDate-green {
+  color: #4ad96e;
+  font-size: 12px;
+}
+.cardDueDate-purple {
+  color: #8730ff;
+  font-size: 12px;
+}
+.cardDueDate-gray {
+  color: #b1b9c6;
+  font-size: 12px;
+}
