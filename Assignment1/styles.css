@@ -7,8 +7,8 @@ nav,
 .logo,
 .search-bar,
 .profile,
-.board,
 .cardName-purple,
+.cardName-darkpurple,
 .cardName-blue,
 .cardName-lightblue {
   display: flex;
@@ -16,6 +16,7 @@ nav,
 }
 
 nav {
+  height: 10dvh;
   background-color: white;
   padding: 13px 30px;
   justify-content: space-between;
@@ -89,8 +90,17 @@ nav {
 }
 
 .kanban {
+  height: 90dvh;
   background-color: #f6f7f8;
   padding: 30px 70px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.board {
+  display: flex;
+  justify-content: center;
 }
 
 .column {
@@ -113,7 +123,10 @@ nav {
   background-color: #fff;
   border-radius: 4px;
 }
-
+.card-parent {
+  height: 70vh;
+  overflow: scroll;
+}
 .card h1 {
   font-weight: bold;
   font-size: 16px;
@@ -137,6 +150,7 @@ nav {
 }
 
 .cardName-purple,
+.cardName-darkpurple,
 .cardName-blue,
 .cardName-lightblue {
   height: 28px;
@@ -148,6 +162,9 @@ nav {
 }
 .cardName-purple {
   background-color: #c134f8;
+}
+.cardName-darkpurple {
+  background-color: #885bf4;
 }
 .cardName-blue {
   background-color: #3691fb;
@@ -174,4 +191,42 @@ nav {
 }
 .cardDueDate-gray {
   color: #b1b9c6;
+}
+
+/* Mobile breakpoints */
+@media (max-width: 1280px) {
+  .column {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .pagination {
+    display: none;
+  }
+  .column {
+    margin-right: 0px !important;
+    display: block !important;
+  }
+}
+
+/* Pagination */
+.pagination a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+/* Style the active/current link */
+.pagination a.active {
+  background-color: #646678;
+  color: white;
+}
+
+/* Add a grey background color on mouse-over */
+.pagination a:hover:not(.active) {
+  background-color: #ddd;
 }

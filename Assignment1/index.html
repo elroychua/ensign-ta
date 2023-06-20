@@ -9,6 +9,8 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500&family=Roboto:wght@100;300;400;500&display=swap"
       rel="stylesheet"
     />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
   </head>
   <body>
     <header>
@@ -31,10 +33,159 @@
     </header>
     <main>
       <div class="kanban">
-        <div class="board"></div>
+        <div class="board">
+          <!-- Backlog column -->
+          <div class="column">
+            <div class="column-header">Backlog</div>
+            <div class="card-parent">
+              <div class="card">
+                <h1>Nulla volutpat aliquam velit</h1>
+                <h3>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Integer posuere erat ar ..
+                </h3>
+                <div class="cardDetails">
+                  <div class="cardName-blue">OZ</div>
+                </div>
+              </div>
+              <div class="card">
+                <h1>Facilisis in pretium nisl aliquet</h1>
+                <h3>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Integer posuere erat ar ..
+                </h3>
+                <div class="cardDetails">
+                  <div class="cardName-purple">LE</div>
+                  <div class="cardDueDate-red">Two days ago</div>
+                </div>
+              </div>
+              <div class="card">
+                <h1>Eget porttitor lorem</h1>
+                <h3>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Integer posuere erat ar ..
+                </h3>
+                <div class="cardDetails">
+                  <div class="cardName-lightblue">ME</div>
+                </div>
+              </div>
+              <div class="card">
+                <h1>Eget porttitor lorem</h1>
+                <h3>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Integer posuere erat ar ..
+                </h3>
+                <div class="cardDetails">
+                  <div class="cardName-lightblue">ME</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Todo column -->
+          <div class="column">
+            <div class="column-header">Todo</div>
+            <div class="card-parent">
+              <div class="card">
+                <h1>Eget porttitor lorem</h1>
+                <h3>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Integer posuere erat ar ..
+                </h3>
+                <div class="cardDetails">
+                  <div class="cardName-darkpurple">AM</div>
+                  <div class="cardDueDate-purple">Today</div>
+                </div>
+              </div>
+              <div class="card">
+                <h1>Consectetur adipiscing elit</h1>
+                <h3>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Integer posuere erat ar ..
+                </h3>
+                <div class="cardDetails">
+                  <div class="cardName-purple">OZ</div>
+                  <div class="cardDueDate-green">In three days</div>
+                </div>
+              </div>
+              <div class="card">
+                <h1>Eget porttitor lorem</h1>
+                <h3>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Integer posuere erat ar ..
+                </h3>
+                <div class="cardDetails">
+                  <div class="cardName-purple">LE</div>
+                  <div class="cardDueDate-green">July 21</div>
+                </div>
+              </div>
+              <div class="card">
+                <h1>Eget porttitor lorem</h1>
+                <h3>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Integer posuere erat ar ..
+                </h3>
+                <div class="cardDetails">
+                  <div class="cardName-purple">LE</div>
+                  <div class="cardDueDate-green">July 21</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Done column -->
+          <div class="column">
+            <div class="column-header">Done</div>
+            <div class="card-parent">
+              <div class="card">
+                <h1>Ac tristique libero volutpat at</h1>
+                <h3>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Integer posuere erat ar ..
+                </h3>
+                <div class="cardDetails">
+                  <div class="cardName-purple">LE</div>
+                  <div class="cardDueDate-gray">A week ago</div>
+                </div>
+              </div>
+              <div class="card">
+                <h1>Phasellus iaculis neque</h1>
+                <h3>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Integer posuere erat ar ..
+                </h3>
+                <div class="cardDetails">
+                  <div class="cardName-blue">OZ</div>
+                  <div class="cardDueDate-gray">Last Tuesday</div>
+                </div>
+              </div>
+              <div class="card">
+                <h1>Facilisis in pretium nis aliquet</h1>
+                <h3>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Integer posuere erat ar ..
+                </h3>
+                <div class="cardDetails">
+                  <div class="cardName-darkpurple">AM</div>
+                </div>
+              </div>
+              <div class="card">
+                <h1>Facilisis in pretium nis aliquet</h1>
+                <h3>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Integer posuere erat ar ..
+                </h3>
+                <div class="cardDetails">
+                  <div class="cardName-darkpurple">AM</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="pagination">
+          <a class="active" href="#">1</a>
+          <a href="#">2</a>
+          <a href="#">3</a>
+        </div>
       </div>
     </main>
-
-    <script src="script.js"></script>
   </body>
 </html>
