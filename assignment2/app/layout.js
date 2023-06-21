@@ -1,4 +1,4 @@
-import { Navbar } from "@/components";
+import { Navbar, Footer } from "@/components";
 import "./globals.css";
 export const metadata = {
   title: "Shopbag",
@@ -10,7 +10,8 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className="relative">
         <Navbar />
-        {children}
+        <main>{children}</main>
+        <Footer />
       </body>
     </html>
   );

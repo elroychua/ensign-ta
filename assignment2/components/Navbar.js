@@ -18,15 +18,14 @@ export default function Nav() {
       let valueLength = value?.length || 0;
       setCartNum(valueLength);
     }
-  });
+  }, [cartNum]);
 
-  console.log(cartNum);
   return (
     <header
       className="w-full mx-auto bg-white absolute t-0 z-10"
       style={{ position: "fixed" }}
     >
-      <nav className="flex mx-auto justify-between items-center py-2 text-2xl sm:px-16 shadow-lg ">
+      <nav className="flex mx-auto justify-between items-center py-2 sm:px-16 shadow-lg ">
         <div className="cursor-pointer">
           <Link href="/">
             <Image
@@ -39,16 +38,17 @@ export default function Nav() {
           </Link>
         </div>
 
-        <div className="relative cursor-pointer">
+        <div className="relative cursor-pointer text-slate-950">
           <Link href="/cart">
-            <FiShoppingCart className=" text-black" />
+            <FiShoppingCart className="text-3xl" />
             <span
-              className="absolute -top-2 -right-2 text-[13px] bg-orange-400 h-[18px] w-[18px]
+              className="absolute -top-3 -right-3 text-sm bg-orange-400 h-6 w-6
                rounded-full grid place-items-center text-white"
               style={{ alignContent: "center" }}
             >
               {cartNum}
             </span>
+            <p>Cart</p>
           </Link>
         </div>
       </nav>
