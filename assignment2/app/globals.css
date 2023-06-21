@@ -25,3 +25,9 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
