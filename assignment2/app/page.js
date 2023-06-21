@@ -2,11 +2,15 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+
 export default async function Home() {
   const data = await getData();
   return (
-    <main className="pt-32 w-full absolute" style={{ background: "#F5F5F5" }}>
-      <div className="max-w-[1440px] mx-auto justify-around px-4 py-2 sm:px-8 md:px-16 md:items-center ">
+    <main>
+      <div className="max-w-[1440px] mx-auto justify-around px-4 py-2 sm:px-8 xl:px-16 md:items-center ">
+        <div className="flex flex-row mb-4 md:ml-10">
+          <p className="text-gray-500 self-center">Product</p>
+        </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-0 md:gap-4">
           {data.map((item) => {
             return (
@@ -29,7 +33,7 @@ export default async function Home() {
                       height={150}
                     />
                   </div>
-                  <div className="details-container self-start flex flex-col mt-4 text-slate-950">
+                  <div className="details-container self-start flex flex-col mt-4 text-slate-950 w-full">
                     <div className="h-8">
                       <h3 className="text-sm text-slate-950 font-normal line-clamp-2 leading-none">
                         {item?.title}
@@ -37,6 +41,9 @@ export default async function Home() {
                     </div>
                     <h4 className="text-lg font-normal text-orange-400">
                       ${item?.price}
+                    </h4>
+                    <h4 className="text-sm font-normal text-gray-500">
+                      Rating: {item?.rating?.rate} / 5
                     </h4>
                   </div>
                 </div>
