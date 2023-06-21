@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
 import { RiArrowRightSLine } from "react-icons/ri";
@@ -47,7 +48,20 @@ export default async function Page({ params }) {
               Description: {data?.description}
             </p>
             <div className="flex flex-col xl:flex-row">
-              <button className="flex flex-row text-blue-500 border-2 border-blue-500 rounded-md px-4 py-2">
+              <button
+                className="flex flex-row text-blue-500 border-2 border-blue-500 rounded-md px-4 py-2"
+                onClick={() => {
+                  let cartItems = localStorage.getItem("cartItems");
+                  if (cartItems) {
+                    cartItems = JSON.parse(cartItems);
+                  } else {
+                    cartItems = [];
+                  }
+                  cartItems.push(data);
+                  window.dispatchEvent(new Event("storage"));
+                  localStorage.setItem("cartItems", JSON.stringify(cartItems));
+                }}
+              >
                 <p> Add to cart</p>
                 <AiOutlineShoppingCart className="text-2xl ml-2" />
               </button>
