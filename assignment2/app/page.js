@@ -4,7 +4,6 @@ import Image from "next/image";
 import Link from "next/link";
 export default async function Home() {
   const data = await getData();
-  console.log(data);
   return (
     <main className="pt-32 w-full absolute" style={{ background: "#F5F5F5" }}>
       <div className="max-w-[1440px] mx-auto justify-around px-4 py-2 sm:px-8 md:px-16 md:items-center ">

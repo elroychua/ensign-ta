@@ -4,7 +4,6 @@ import { RiArrowRightSLine } from "react-icons/ri";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 export default async function Page({ params }) {
   const data = await getProduct(params.slug);
-  console.log(data);
   return (
     <main className="pt-32 w-full min-h-screen absolute bg-white">
       <div className="flex flex-row ml-10">
