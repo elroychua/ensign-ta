@@ -7,7 +7,6 @@
 ## Task:
 
 1. Implement given design (`design.png`) in HTML and CSS. </br>
-   (design.png is in the same folder as this README.md file)
 2. Try to come up with your own solution and do not use any CSS framework. The content can be hardcoded and you can use any font and images.
 3. The design is not responsive, but you can make it responsive if you want to.
 
