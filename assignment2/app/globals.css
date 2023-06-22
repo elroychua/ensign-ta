@@ -32,7 +32,11 @@ main {
   width: 100%;
   minheight: 100vh;
 }
-
+@media (max-width: 1024px) {
+  main {
+    padding: 4rem;
+  }
+}
 p {
   color: #000;
 }

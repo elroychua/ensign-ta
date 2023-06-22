@@ -14,7 +14,7 @@ export default async function Page({ params }) {
         </Link>
         <div className="flex flex-row text-gray-500">
           <RiArrowRightSLine className="self-center" />
-          <p>{data?.title}</p>
+          <p className="text-gray-500">{data?.title}</p>
         </div>
       </div>
       <div className="product-container py-5 px-10 flex flex-col items-center xl:items-start lg:flex-row rounded-md bg-white">
@@ -46,9 +46,7 @@ export default async function Page({ params }) {
               />
             </div>
 
-            <p className="text-2xl font-semibold text-gray-500  ml-1">
-              {data?.rating?.rate}
-            </p>
+            <p className="text-xl font-semibold  ml-1">{data?.rating?.rate}</p>
           </div>
 
           <p className="text-xl font-bold mb-2">${data?.price}</p>
@@ -70,7 +68,7 @@ export default async function Page({ params }) {
                 window.dispatchEvent(new Event("storage"));
               }}
             >
-              <p> Add to cart</p>
+              <p className="text-white"> Add to cart</p>
               <AiOutlineShoppingCart className="text-2xl ml-2" />
             </button>
             <p className="text-base font-normal text-gray-500 ml-2 self-center">

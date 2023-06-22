@@ -26,7 +26,7 @@ export default function Nav() {
       className="w-full mx-auto bg-white absolute t-0 z-10"
       style={{ position: "fixed" }}
     >
-      <nav className="flex mx-auto justify-between items-center py-2 sm:px-16 shadow-lg ">
+      <nav className="flex mx-auto justify-between items-center py-2 px-8 sm:px-16 shadow-lg ">
         <div className="cursor-pointer">
           <Link href="/">
             <Image
