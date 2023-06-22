@@ -2,7 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { RiArrowRightSLine } from "react-icons/ri";
-import { AiOutlineShoppingCart, AiOutlineInfoCircle } from "react-icons/ai";
+import { AiOutlineShoppingCart } from "react-icons/ai";
 import { Rating } from "react-simple-star-rating";
 export default async function Page({ params }) {
   const data = await getProduct(params.slug);
@@ -66,8 +66,8 @@ export default async function Page({ params }) {
                   cartItems = [];
                 }
                 cartItems.push(data);
-                window.dispatchEvent(new Event("storage"));
                 localStorage.setItem("cartItems", JSON.stringify(cartItems));
+                window.dispatchEvent(new Event("storage"));
               }}
             >
               <p> Add to cart</p>
@@ -85,7 +85,6 @@ export default async function Page({ params }) {
 async function getProduct(id) {
   const res = await fetch(`https://fakestoreapi.com/products/${id}`);
   if (!res.ok) {
-    // This will activate the closest `error.js` Error Boundary
     throw new Error("Failed to fetch data");
   }
   return res.json();

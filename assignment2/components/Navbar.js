@@ -8,17 +8,18 @@ import { FiShoppingCart } from "react-icons/fi";
 export default function Nav() {
   const [cartNum, setCartNum] = useState(null);
   useEffect(() => {
-    window.addEventListener("storage", () => {
-      let value = JSON.parse(localStorage.getItem("cartItems"));
-      let valueLength = value?.length + 1 || 0;
+    const updateCartNum = () => {
+      const value = JSON.parse(localStorage.getItem("cartItems"));
+      const valueLength = value?.length || 0;
       setCartNum(valueLength);
-    });
-    if (!cartNum) {
-      let value = JSON.parse(localStorage.getItem("cartItems"));
-      let valueLength = value?.length || 0;
-      setCartNum(valueLength);
-    }
-  }, [cartNum]);
+    };
+    window.addEventListener("storage", updateCartNum);
+    updateCartNum();
+    // Clean up the event listener
+    return () => {
+      window.removeEventListener("storage", updateCartNum);
+    };
+  }, []);
 
   return (
     <header

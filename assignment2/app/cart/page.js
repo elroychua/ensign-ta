@@ -1,5 +1,23 @@
 "use client";
 import { useEffect, useState } from "react";
+export function calculateTotalPrice(cartItems) {
+  return Object.values(
+    cartItems.reduce((accumulator, item) => {
+      if (!accumulator[item.id]) {
+        accumulator[item.id] = {
+          ...item,
+          count: 1,
+        };
+      } else {
+        accumulator[item.id].count++;
+      }
+      return accumulator;
+    }, {})
+  ).reduce((total, groupedItem) => {
+    return total + groupedItem.price * groupedItem.count;
+  }, 0);
+}
+
 export default function Cart() {
   const [cartItems, setCartItems] = useState([]);
 
@@ -43,31 +61,17 @@ export default function Cart() {
     }
   };
 
-  const calculateTotalPrice = () => {
-    return Object.values(
-      cartItems.reduce((accumulator, item) => {
-        if (!accumulator[item.id]) {
-          accumulator[item.id] = {
-            ...item,
-            count: 1,
-          };
-        } else {
-          accumulator[item.id].count++;
-        }
-        return accumulator;
-      }, {})
-    ).reduce((total, groupedItem) => {
-      return total + groupedItem.price * groupedItem.count;
-    }, 0);
+  const clearCart = () => {
+    localStorage.removeItem("cartItems");
+    window.dispatchEvent(new Event("storage"));
   };
-
   return (
     <div className="max-w-[1440px] mx-auto min-h-min justify-around px-4 py-2 sm:px-8 xl:px-16 md:items-center ">
       <div className="flex flex-row mb-4 md:ml-10">
         <p className="text-gray-500 self-center">Cart</p>
       </div>
-      {cartItems.length === 0 ? (
-        <p className="text-slate-950 text-center">Your cart is empty.</p>
+      {!cartItems || cartItems?.length === 0 ? (
+        <p className="text-center">Your cart is empty.</p>
       ) : (
         <div>
           <table className="table-auto w-full text-slate-950">
@@ -124,12 +128,21 @@ export default function Cart() {
               ))}
             </tbody>
           </table>
-          <p className="text-end text-slate-950">
-            Total items: {cartItems.length}
+          <p className="text-end">Total items: {cartItems.length}</p>
+          <p className="text-end">
+            Total price: ${calculateTotalPrice(cartItems).toFixed(2)}
           </p>
-          <p className="text-end text-slate-950">
-            Total price: ${calculateTotalPrice().toFixed(2)}
-          </p>
+          <div className="flex flex-row justify-end">
+            <button className="text-end bg-blue-500 hover:bg-blue-600 text-white ">
+              Proceed to Checkout
+            </button>
+            <button
+              className="text-end bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded"
+              onClick={clearCart}
+            >
+              Empty Cart
+            </button>
+          </div>
         </div>
       )}
     </div>

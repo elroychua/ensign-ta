@@ -29,11 +29,23 @@ body {
 main {
   background: #f5f5f5;
   padding: 8rem;
-
   width: 100%;
   minheight: 100vh;
 }
 
+p {
+  color: #000;
+}
+
+button {
+  font: bold;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 1rem; /* 16px */
+  padding-right: 1rem; /* 16px */
+  border-radius: 0.25rem;
+  margin-right: 0.5rem;
+}
 .card-container {
   display: flex;
   flex-direction: column;
