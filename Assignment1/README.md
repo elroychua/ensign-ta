@@ -9,9 +9,9 @@
 
 ## Assumptions made:
 
-1. The design is not responsive.
-2. Solution for non mobile view is with HTML and CSS. (no JS)
-3. Solution for mobile view allows for JS. (as it is a bonus).
+1. The design is responsive.
+2. Solution for non-mobile view is with HTML and CSS. (no JS)
+3. Solution for mobile view allows for JS. (as it is a bonus)
 
 ## Technical decisions:
 
@@ -23,5 +23,5 @@
 ## Instructions on how to run:
 
 1. Clone the repository.
-2. Open assignment1 folder.
-3. Open `index.html` in your browser.
+2. Open `assignment1` folder.
+3. Open `index.html` in a browser.
