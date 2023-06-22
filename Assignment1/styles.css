@@ -16,7 +16,6 @@ nav,
 }
 
 nav {
-  height: 10dvh;
   background-color: white;
   padding: 13px 30px;
   justify-content: space-between;
@@ -113,8 +112,8 @@ nav {
 
 .column-header {
   font-weight: bold;
-  font-size: 24px;
-  padding-bottom: 30px;
+  font-size: 28px;
+  padding-bottom: 38px;
 }
 
 .card {
@@ -122,6 +121,7 @@ nav {
   padding: 14px 16px;
   background-color: #fff;
   border-radius: 4px;
+  height: 150px;
 }
 .card-parent {
   height: 70vh;
@@ -143,7 +143,7 @@ nav {
 
 .cardDetails {
   display: flex;
-  font-size: 10px;
+  font-size: 12px;
   height: 30px;
   justify-content: space-between;
   margin-top: 10px;
@@ -153,22 +153,26 @@ nav {
 .cardName-darkpurple,
 .cardName-blue,
 .cardName-lightblue {
-  height: 28px;
-  width: 28px;
+  height: 34px;
+  width: 34px;
   align-self: center;
   justify-content: center;
   border-radius: 50%;
   color: #ffffff;
 }
+
 .cardName-purple {
   background-color: #c134f8;
 }
+
 .cardName-darkpurple {
   background-color: #885bf4;
 }
+
 .cardName-blue {
   background-color: #3691fb;
 }
+
 .cardName-lightblue {
   background-color: #3dcefb;
 }
@@ -178,7 +182,9 @@ nav {
 .cardDueDate-green,
 .cardDueDate-purple,
 .cardDueDate-gray {
-  font-size: 12px;
+  display: flex;
+  font-size: 14px;
+  align-items: center;
 }
 .cardDueDate-red {
   color: #ef0000;
@@ -193,40 +199,53 @@ nav {
   color: #b1b9c6;
 }
 
-/* Mobile breakpoints */
-@media (max-width: 1280px) {
-  .column {
-    display: none;
-  }
-}
-
+/* Pagination breakpoint */
 @media screen and (min-width: 1280px) {
   .pagination {
     display: none;
   }
-  .column {
-    margin-right: 0px !important;
-    display: block !important;
+  .nav {
+    height: 10dvh;
   }
 }
 
 /* Pagination */
-.pagination a {
-  color: black;
-  float: left;
-  padding: 8px 16px;
-  border-radius: 5px;
-  text-decoration: none;
-  transition: background-color 0.3s;
+.pagination {
+  text-align: center;
+  margin: 30px 30px 60px;
+  user-select: none;
 }
 
-/* Style the active/current link */
-.pagination a.active {
+.pagination li {
+  display: inline-block;
+  margin: 5px;
+  box-shadow: 0 5px 25px reg(1 1 1 / 10%);
+}
+
+.pagination li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2em;
+  line-height: 45px;
+}
+
+.previous-page,
+.next-page {
+  background: #0ab1ce;
+  width: 80px;
+  border-radius: 45px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.current-page {
+  background: #ccc;
+  width: 45px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.active {
   background-color: #646678;
   color: white;
-}
-
-/* Add a grey background color on mouse-over */
-.pagination a:hover:not(.active) {
-  background-color: #ddd;
 }

@@ -9,8 +9,7 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500&family=Roboto:wght@100;300;400;500&display=swap"
       rel="stylesheet"
     />
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
   </head>
   <body>
     <header>
@@ -181,11 +180,60 @@
           </div>
         </div>
         <div class="pagination">
-          <a class="active" href="#">1</a>
-          <a href="#">2</a>
-          <a href="#">3</a>
+          <li class="page-item current-page">
+            <a class="page-link" href="#">1</a>
+          </li>
+          <li class="page-item current-page">
+            <a class="page-link" href="#">2</a>
+          </li>
+          <li class="page-item current-page">
+            <a class="page-link" href="#">3</a>
+          </li>
         </div>
       </div>
     </main>
+    <!-- JavaScript code for pagination on mobile screens -->
+    <script type="text/javascript">
+      function displayColumn(columnIndex) {
+        var columns = document.getElementsByClassName("column");
+        var paginationLink = document.getElementsByClassName("page-item");
+        for (var i = 0; i < columns.length; i++) {
+          columns[i].style.display = "none";
+          paginationLink[i].classList.remove("active");
+        }
+        columns[columnIndex].style.display = "block";
+        paginationLink[columnIndex].classList.add("active");
+      }
+
+      function handlePaginationClick(pageIndex) {
+        var columnIndex = pageIndex - 1;
+        displayColumn(columnIndex);
+      }
+
+      var paginationLinks = document.getElementsByClassName("page-link");
+      for (var i = 0; i < paginationLinks.length; i++) {
+        var pageIndex = parseInt(paginationLinks[i].innerText);
+        paginationLinks[i].addEventListener("click", function (event) {
+          event.preventDefault();
+          var pageIndex = parseInt(event.target.innerText);
+          handlePaginationClick(pageIndex);
+        });
+      }
+      function toggleColumns() {
+        var columns = document.querySelectorAll(".column");
+        if (window.innerWidth < 1280) {
+          for (var i = 1; i < columns.length; i++) {
+            columns[i].style.display = "none";
+          }
+        } else {
+          for (var i = 0; i < columns.length; i++) {
+            columns[i].style.display = "block";
+          }
+        }
+      }
+      displayColumn(0);
+      toggleColumns();
+      window.addEventListener("resize", toggleColumns);
+    </script>
   </body>
 </html>
