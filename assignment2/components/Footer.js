@@ -2,7 +2,7 @@ import { RiCopyrightFill } from "react-icons/ri";
 import Link from "next/link";
 export default function Footer() {
   return (
-    <div className="flex flex-col mt-10 pb-2 place-content-center">
+    <div className="flex flex-col mt-0 md:mt-10 p-8 md:p-32 place-content-center">
       <div className="flex flex-col md:flex-row justify-around">
         <div className="flex flex-col md:w-2/3">
           <h2 className="text-lg font-bold pb-2 text-white">Shopbag</h2>
