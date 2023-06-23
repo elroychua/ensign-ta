@@ -229,15 +229,6 @@ nav {
   line-height: 45px;
 }
 
-.previous-page,
-.next-page {
-  background: #0ab1ce;
-  width: 80px;
-  border-radius: 45px;
-  cursor: pointer;
-  transition: 0.3s ease;
-}
-
 .current-page {
   background: #ccc;
   width: 45px;
